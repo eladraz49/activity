@@ -19,13 +19,10 @@ public class MainActivity2 extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.button);
 
-        // קבלת הטקסט שנשלח ב-Intent
         String userInput = getIntent().getStringExtra("USER_INPUT");
 
-        // הצגת הטקסט ב-TextView
         textView.setText(userInput);
 
-        // לחיצה על הכפתור לסגור את MainActivity2
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
