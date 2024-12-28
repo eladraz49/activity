@@ -17,25 +17,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // אתחול רכיבי ה-UI
         editText = findViewById(R.id.editText);
         button = findViewById(R.id.button);
 
-        // לחיצה על הכפתור לפתיחת האקטיביטי MainActivity2
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // קבלת הטקסט מה-EditText
                 String userInput = editText.getText().toString();
 
-                // יצירת Intent עבור MainActivity2
                 Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-                intent.putExtra("USER_INPUT", userInput); // שליחת הנתון לאקטיביטי השנייה
+                intent.putExtra("USER_INPUT", userInput);
 
-                // פתיחת MainActivity2
                 startActivity(intent);
 
-                // סגירת MainActivity
                 finish();
             }
         });
